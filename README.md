@@ -12,4 +12,4 @@ The model uses various data dimensions to assess purchase likelihood:
 - **Outcome**: `Purchase_Likelihood`
 
 ##### **<span style= "color: rgb(171, 211, 226);"> Approach </span>**  
-......
+LassoCV was largely favored in ElasticNet due to the sparse coefficient values of 0. Even though the alpha used in ElasticNet was 0.4 (closer to L2 regularization), the coefficients suggest that Lasso was predominantly used. While the RMSE values for all models were similar, LassoCV performed slightly better with an alpha of 1000.
