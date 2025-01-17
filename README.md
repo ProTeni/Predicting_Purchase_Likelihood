@@ -11,5 +11,21 @@ The model uses various data dimensions to assess purchase likelihood:
 - **Behavioral Insights**: `Engagement_with_Ads`, `Purchase_History`  
 - **Outcome**: `Purchase_Likelihood`
 
-##### **<span style= "color: rgb(171, 211, 226);"> Approach </span>**  
-LassoCV was largely favored in ElasticNet due to the sparse coefficient values of 0. Even though the alpha used in ElasticNet was 0.4 (closer to L2 regularization), the coefficients suggest that Lasso was predominantly used. While the RMSE values for all models were similar, LassoCV performed slightly better with an alpha of 1000.
+##### **<span style= "color: rgb(171, 211, 226);"> Task Summary </span>**  
+
+This project predicts **Purchase Likelihood (binary: 0/1)** using various classification models. Key steps and outcomes:
+
+- **Scaling**:  
+  - **RobustScaler** was used due to data skewness and the presence of outliers, based on interquartile range (IQR) analysis.  
+  - Logarithmic transformations were applied to reduce skewness in select features.  
+
+- **Scoring Metric**:  
+  - **Recall** was prioritized to minimize false negatives, aligning with the marketing goal of maximizing lead conversions.  
+
+- **Best Model**:  
+  - **RidgeClassifierCV with PCA**:  
+    - **Recall**: 0.7206  
+    - **F1-Score**: 0.5568  
+    - **Accuracy**: 0.48  
+
+This model excelled by leveraging PCA for dimensionality reduction and Ridge for robust regularization, ensuring the highest recall for true positive identification.
