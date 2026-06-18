@@ -1,11 +1,13 @@
+![Alt](./Images/pexels-photo-27173251.webp)
+
 # Predicting Purchase Likelihood — A Classification Pipeline (and an Honest Result)
 
 **A full binary-classification workflow on marketing engagement data — and a candid write-up of why the model didn't beat chance, and what that tells us.**
 
-> This project runs the complete classification pipeline end to end. The headline finding is
-> not a high score — it's a diagnosis: the available features don't carry enough signal to
-> predict purchase likelihood, and no amount of tuning changes that. Knowing *why* a model
-> fails is as valuable as making one succeed.
+This project runs the complete classification pipeline end to end. The headline finding is
+not a high score — it's a diagnosis: the available features don't carry enough signal to
+predict purchase likelihood, and no amount of tuning changes that. Knowing *why* a model
+fails is as valuable as making one succeed.
 
 ---
 
@@ -13,6 +15,12 @@
 MarketGenix wants to target leads most likely to convert, using Google Analytics engagement
 data (likes, shares, comments, clicks, time on platform, ad engagement, purchase history).
 The task: predict **Purchase Likelihood** (binary) so marketing can prioritise high-potential leads.
+
+##### **<span style= "color: rgb(171, 211, 226);"> Key Features </span>**  
+The model uses various data dimensions to assess purchase likelihood:  
+- **Engagement Metrics**: `Engagement_Level`, `Likes`, `Shares`, `Comments`, `Clicks`, `Time_Spent_on_Platform`  
+- **Behavioral Insights**: `Engagement_with_Ads`, `Purchase_History`  
+- **Outcome**: `Purchase_Likelihood`
 
 ## What I did
 A deliberately thorough pipeline, to rule out technique as the limiting factor:
